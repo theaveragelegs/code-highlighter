@@ -1,0 +1,82 @@
+{
+  "name": "code-highlighter",
+  "displayName": "Code Highlighter",
+  "description": "The Best code-highlighter",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:code-highlighter.addHighlight"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "code-highlighter.addHighlight",
+        "title": "Add Highlight"
+      },
+      {
+        "command": "code-highlighter.revealHighlight",
+        "title": "Reveal Highlight"
+      },
+      {
+        "command": "code-highlighter.removeAllHighlightsInFile",
+        "title": "Remove All Highlights in Current File"
+      },
+      {
+        "command": "code-highlighter.removeAllHighlights",
+        "title": "Remove All Highlights"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "code-highlighter.addHighlight",
+          "when": "editorHasSelection",
+          "group": "1_modification"
+        },
+        {
+          "command": "code-highlighter.removeAllHighlightsInFile",
+          "group": "1_modification"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "code-highlighter.removeAllHighlights"
+        }
+      ]
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "highlightsView",
+          "name": "Highlights"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.105.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.36.0",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
