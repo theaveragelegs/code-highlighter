@@ -1,72 +1,59 @@
-# Code Highlighter
+I just made this VS Code extension for fun. It’s not perfect, but it works.
+You can highlight parts of your code, give them names and colors, and they’ll stay saved even when you close VS Code.
+It also shows all your highlights in a sidebar so you can jump around quickly.
 
-A professional VS Code extension to **highlight code with custom names and colors**.  
-Highlights are **persistent**, automatically load when opening files, and appear in a **sidebar panel**.
+If you want to help make it better or fix things, message me on Discord: theaveragelego
 
-## Features
+What It Does
 
-- **Add Highlights**: Right-click selected text and add custom highlights with names and colors
-- **Persistent Storage**: Highlights automatically save and reload when you reopen VS Code
-- **Sidebar Panel**: View all highlights for the current file in an organized sidebar
-- **Quick Navigation**: Click any highlight in the sidebar to jump directly to that code section
-- **Visual Customization**: Choose any color for your highlights (hex codes or named colors)
-- **Non-Intrusive Design**: Subtle transparent highlights that don't obstruct your code
-- **Hover Information**: Hover over any highlight to see its custom name
-- **Bulk Management**: Remove all highlights from current file or clear everything at once
+Add Highlights: Right-click selected text and give it a name and color
 
-## Usage
+Auto Save: Highlights stay even after restarting VS Code
 
-### Adding Highlights
-1. Select some text in your code file
-2. Right-click and choose **"Add Highlight"**
-3. Enter a descriptive name for your highlight
-4. Choose a color (hex format like `#FF5733` or named colors like `yellow`)
-5. Your highlight appears instantly with a subtle background and border
+Sidebar Panel: See all your highlights for the current file in one place
 
-### Managing Highlights
-- **View All Highlights**: Open the "Highlights" sidebar in the Explorer panel
-- **Jump to Code**: Click any highlight in the sidebar to navigate to that section
-- **Remove Highlights**: 
-  - Right-click in editor → "Remove All Highlights in Current File"
-  - Use Command Palette (Ctrl+Shift+P) → "Remove All Highlights"
+Quick Jump: Click a highlight in the sidebar to jump to it
 
-### Color Examples
-- `#FF5733` - Orange red
-- `#33FF57` - Bright green  
-- `#3357FF` - Blue
-- `yellow` - Named color yellow
-- `#FFFF88` - Default light yellow
+Any Color You Want: Use hex codes or named colors like “yellow” or “aqua”
 
-## Extension Settings
+Remove Highlights: Clear highlights for one file or all at once
 
-This extension currently doesn't require any configuration. All highlights are automatically saved to VS Code's global storage.
+Hover Info: Hover over a highlight to see its name
 
-## Commands
+How To Use
+Add a Highlight
 
-- `code-highlighter.addHighlight` - Add a new highlight to selected text
-- `code-highlighter.removeAllHighlightsInFile` - Remove all highlights from current file
-- `code-highlighter.removeAllHighlights` - Remove all highlights from all files
-- `code-highlighter.revealHighlight` - Jump to a specific highlight (used by sidebar)
+Select some text in your file
 
-## Known Issues
+Right-click and choose Add Highlight
 
-- Highlights are file-specific and tied to absolute file paths
-- Individual highlight removal is not yet implemented (use bulk removal options)
-- Line number changes may require highlights to be repositioned
+Give it a name and pick a color (like #FF5733 or yellow)
 
-## Release Notes
+The highlight appears in your editor
 
-### 1.0.0
-- Initial release of Code Highlighter
-- Add custom-named highlights with colors
-- Persistent storage across VS Code sessions
-- Sidebar panel for highlight management
-- Bulk removal options
+Manage Highlights
+Open the Highlights sidebar (in the Explorer panel) to see all your highlights
+Click one to jump right to it
+To clear highlights:
+Right-click and select “Remove All Highlights in Current File”
+Or open the Command Palette (Ctrl+Shift+P) and select “Remove All Highlights”
 
-## Contributing
+Extension Settings
+No setup needed. Highlights save automatically to VS Code’s global storage.
+If you’re working in a shared folder, they’ll sync across users in the same workspace.
 
-Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
+Known Issues
+Highlights are tied to file paths, so if you move a file they won’t follow yet
+You can’t remove individual highlights yet
+If you change line numbers a lot, highlights may shift
 
-## License
+Contributing
+Contributions are welcome.
+Pull requests and ideas are appreciated, or message me on Discord: theaveragelego
 
-This extension is licensed under the MIT License.
+License
+This project is licensed under the MIT License.
+
+Right-click and select “Remove All Highlights in Current File”
+
+Or open the Command Palette (Ctrl+Shift+P) and select “Remove All Highlights”
